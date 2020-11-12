@@ -1,0 +1,21 @@
+customer Code : <input  [(ngModel)]= "customerModel.CustomerCode" type="test"/><!-- ([ngModel]) =>2 way loading--> <br/>
+customer Name : <input   [(ngModel)] = "customerModel.CustomerName" type=test/><br/>
+customer Amount : <input  [(ngModel)] = "customerModel.CustomerAmount" type=test/><br/>
+<input (click)="add()" type=button value="Add"/>
+- {{customerModel.CustomerCode}}<br/> <!--lit un valeur-->
+- {{customerModel.CustomerName}}<br/>
+- {{customerModel.CustomerAmount}}<br/>
+
+<table>
+    <tr>
+        <td>customer Code</td>
+        <td>customer Name</td>
+        <td>customer Amount</td>
+    </tr>
+   <tr *ngFor="let cust of customerModels">
+        <td>{{cust.CustomerCode}}</td>
+        <td>{{cust.CustomerName}}</td>
+        <td>{{cust.CustomerAmount}}</td>
+    </tr>
+
+</table>
