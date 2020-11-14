@@ -1,11 +1,20 @@
-logo
-<a [routerLink] ="['home']">Home</a><br/>
-<a [routerLink] ="['customer/add']">Customer add</a><br/>
-<a [routerLink] ="['supplier/add']">Supplier add<br/>
+<table border=0>
+    <tr>
+        <td><img src="https://brandmark.io/logo-rank/imagecache/6554bed6666fe6de26e7d15283607b1a.png" width="50px"/></td>
+        <td><a href="https://github.com/anthonyGosme/angular10">Angular 10 test</a></td>  
+    </tr>
+    <tr>
+        <td><a [routerLink] ="['home']">Home</a><br/>
+            <a [routerLink] ="['customer/add']">Customer add</a><br/>
+            <a [routerLink] ="['supplier/add']">Supplier add<br/></a>
+            </td>
+        <td><div>
+            <router-outlet></router-outlet>
+        </div></td>
+    </tr>
+    <tr>
+        <td>by Anthony Gosme</td>
+    </tr>
+</table>
 
-</a>
-links 
-<div>
-    <router-outlet></router-outlet>
-</div>
-footers
+
