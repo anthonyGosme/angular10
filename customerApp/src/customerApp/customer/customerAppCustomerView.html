@@ -7,6 +7,10 @@ customer Name : <input formControlName="CustomerNameControl" [(ngModel)] = "cust
 customer Amount : <input [ngModelOptions]="{standalone:true}"  [(ngModel)] = "customerModel.CustomerAmount" type=test/><br/>
 <input [disabled]="!(customerModel.formCustomerGroup.valid)" (click)="add()" type=button value="Add"/>
 </form>
+<div *ngIf="customerModel.formCustomerGroup.dirty" [hidden]="!customerModel.formCustomerGroup.controls['CustomerCodeControl'].hasError('pattern')">Customer code format is not proper</div>
+<div *ngIf="customerModel.formCustomerGroup.dirty" [hidden]="!customerModel.formCustomerGroup.controls['CustomerCodeControl'].hasError('required')">Customer code  is required</div>
+<div *ngIf="customerModel.formCustomerGroup.dirty" [hidden]="!customerModel.formCustomerGroup.controls['CustomerNameControl'].hasError('required')">Customer name is requiered</div>
+
 - {{customerModel.CustomerCode}}<br/> <!--lit un valeur-->
 - {{customerModel.CustomerName}}<br/>
 - {{customerModel.CustomerAmount}}<br/>

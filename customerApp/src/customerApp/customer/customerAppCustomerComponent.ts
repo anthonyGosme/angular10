@@ -15,5 +15,5 @@ export class customerComponent {
     this.customerModels.push(this.customerModel) ;
     this.customerModel = new Customer()  // clear UI
     }
-  
+ 
 }
