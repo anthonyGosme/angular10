@@ -24,3 +24,6 @@ cd customerApp
 npm view jquery versions
 "jquery": "^3.0.0" -> package.json
 npm install -> install le dernier 3.*.*
+
+
+form group -> form control -> validation

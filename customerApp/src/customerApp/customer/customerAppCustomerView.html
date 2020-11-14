@@ -1,13 +1,15 @@
 <h1>{{title}}</h1>
 ngModel need formsModule<br/>
-customer Code : <input  [(ngModel)]= "customerModel.CustomerCode" type="test"/><!-- ([ngModel]) =>2 way loading--> <br/>
-customer Name : <input   [(ngModel)] = "customerModel.CustomerName" type=test/><br/>
-customer Amount : <input  [(ngModel)] = "customerModel.CustomerAmount" type=test/><br/>
-<input (click)="add()" type=button value="Add"/>
+
+<form [formGroup] ="customerModel.formCustomerGroup" >
+customer Code : <input formControlName="CustomerCodeControl" [(ngModel)]= "customerModel.CustomerCode" type="test"/><!-- ([ngModel]) =>2 way loading--> <br/>
+customer Name : <input formControlName="CustomerNameControl" [(ngModel)] = "customerModel.CustomerName" type=test/><br/>
+customer Amount : <input [ngModelOptions]="{standalone:true}"  [(ngModel)] = "customerModel.CustomerAmount" type=test/><br/>
+<input [disabled]="!(customerModel.formCustomerGroup.valid)" (click)="add()" type=button value="Add"/>
+</form>
 - {{customerModel.CustomerCode}}<br/> <!--lit un valeur-->
 - {{customerModel.CustomerName}}<br/>
 - {{customerModel.CustomerAmount}}<br/>
-
 <table>
     <tr>
         <td>customer Code</td>
