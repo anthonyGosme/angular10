@@ -4,11 +4,11 @@ import { RouterModule } from '@angular/router';
 import { customerRoutes } from '../routing/customerAppCustomerRouting';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { customerComponent } from './customerAppCustomerComponent';
-
+import { gridComponent } from '../utility/customerAppGridComponent';
 
 @NgModule({
   declarations: [
-    customerComponent
+    customerComponent, gridComponent
     // charge des conmposants
   ],
   imports: [

@@ -11,7 +11,12 @@ customer Amount : <input [ngModelOptions]="{standalone:true}"  [(ngModel)] = "cu
 <div *ngIf="customerModel.formCustomerGroup.dirty" [hidden]="!customerModel.formCustomerGroup.controls['CustomerCodeControl'].hasError('required')">Customer code  is required</div>
 <div *ngIf="customerModel.formCustomerGroup.dirty" [hidden]="!customerModel.formCustomerGroup.controls['CustomerNameControl'].hasError('required')">Customer name is requiered</div>
 
-- {{customerModel.CustomerCode}}<br/> <!--lit un valeur-->
+<grid-ui [grid-columns]="[{'colName':'CustomerCode'},{'colName':'CustomerName'},{'colName':'CustomerAmount'}]"
+ [grid-data]="customerModels" (grid-selected)="selectCustomer($event)"></grid-ui>
+<!--
+
+
+- {{customerModel.CustomerCode}}<br/> 
 - {{customerModel.CustomerName}}<br/>
 - {{customerModel.CustomerAmount}}<br/>
 <table>
@@ -27,3 +32,4 @@ customer Amount : <input [ngModelOptions]="{standalone:true}"  [(ngModel)] = "cu
     </tr>
 
 </table>
+-->

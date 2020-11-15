@@ -19,6 +19,11 @@ export class customerComponent {
   title = 'customerApp';
   customerModel : Customer = new Customer() ;
   customerModels : Array<Customer> = new Array<Customer>() ;
+
+  selectCustomer(_selected: Customer){
+    this.customerModel = _selected ;
+  }
+
   add(){
     this.customerModels.push(this.customerModel) ;
     this.customerModel = new Customer()  // clear UI
