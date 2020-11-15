@@ -5,6 +5,7 @@ import { customerRoutes } from '../routing/customerAppCustomerRouting';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { customerComponent } from './customerAppCustomerComponent';
 
+
 @NgModule({
   declarations: [
     customerComponent
@@ -13,7 +14,9 @@ import { customerComponent } from './customerAppCustomerComponent';
   imports: [
     CommonModule,ReactiveFormsModule, FormsModule, RouterModule.forChild(customerRoutes)  // import des modules
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [customerComponent] // demarre le composant customerComponent
 })
 export class customerModule { }

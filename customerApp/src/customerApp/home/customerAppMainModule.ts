@@ -5,6 +5,7 @@ import { mainRoutes } from '../routing/customerAppMainRouting';
 import { FormsModule } from '@angular/forms';
 import { homeComponent } from './customerAppHomeComponent';
 import { masterPageComponent } from './customerAppMasterPageComponent';
+import { baseLogger, fileLogger } from '../utility/logger';
 @NgModule({
   declarations: [
     homeComponent,masterPageComponent
@@ -13,7 +14,10 @@ import { masterPageComponent } from './customerAppMasterPageComponent';
   imports: [
     BrowserModule, FormsModule, RouterModule.forRoot(mainRoutes)  // import des modules
   ],
-  providers: [],
+  providers: [    {
+    provide: baseLogger,
+    useClass: fileLogger
+  }],
   bootstrap: [masterPageComponent] // demarre le composant customerComponent
 })
 export class mainModule { }

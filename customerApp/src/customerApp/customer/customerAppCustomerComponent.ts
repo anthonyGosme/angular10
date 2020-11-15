@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { baseLogger } from '../utility/logger';
 import { Customer } from "./customerApp.model" ;
 
 @Component({
@@ -8,6 +9,13 @@ import { Customer } from "./customerApp.model" ;
 })
 export class customerComponent { 
   /** export pour être importé */
+  logger : baseLogger = null;
+  constructor(loggerInject : baseLogger)
+  {
+    this.logger = loggerInject ;
+    this.logger.log();
+    
+  }
   title = 'customerApp';
   customerModel : Customer = new Customer() ;
   customerModels : Array<Customer> = new Array<Customer>() ;
