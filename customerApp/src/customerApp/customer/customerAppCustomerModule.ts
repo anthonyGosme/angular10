@@ -5,6 +5,8 @@ import { customerRoutes } from '../routing/customerAppCustomerRouting';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { customerComponent } from './customerAppCustomerComponent';
 import { gridComponent } from '../utility/customerAppGridComponent';
+import {HttpClientModule} from "@angular/common/http"
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,7 @@ import { gridComponent } from '../utility/customerAppGridComponent';
     // charge des conmposants
   ],
   imports: [
-    CommonModule,ReactiveFormsModule, FormsModule, RouterModule.forChild(customerRoutes)  // import des modules
+    HttpClientModule, CommonModule,ReactiveFormsModule, FormsModule, RouterModule.forChild(customerRoutes)  // import des modules
   ],
   providers: [
 
