@@ -31,4 +31,3 @@ form group -> form control -> validation
 #fake server
 npm install -g json-server
 json-server --watch db.json
-npm install @angular/http@latest
